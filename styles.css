@@ -1,0 +1,30 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    flex-wrap: wrap;
+    border: 2px solid red;
+}
+
+.result{
+    border: 2px solid green;
+
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap:35px;
+    width: 100%;
+
+}
+button{
+    width: 200px;
+    height: 200px;
+    font-size: 35px;
+    border-radius: 8px;
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
