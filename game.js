@@ -69,6 +69,10 @@ function displayResults(outcome){
 function updateScoreBoard(playerScore, computerScore){
     player.innerHTML = "Player Score: " + playerScore;
     computer.innerHTML = "Computer Score: "+ computerScore;
+
+    player.style.color = 'brown';
+    computer.style.color = 'brown';
+    
     
     score.appendChild(player);
     score.appendChild(computer);

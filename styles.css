@@ -76,18 +76,25 @@ body{
 .buttons{
     display: flex;
     justify-content: center;
-    gap:35px;
+    gap:55px;
     width: 100%;
 }
 button{
-    width: 150px;
+    width: 250px;
     height: 150px;
     font-size: 25px;
     border-radius: 12px;
     border: 2px solid azure;
     background-color: rgb(29, 192, 192);
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
+}
+button:hover{
+    background-color: rgb(75, 177, 177);
+    font-size: 45px;
+    font-style: italic;
+    color: rgb(102, 11, 11);
 }
 .hidden{
     display: none;
