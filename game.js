@@ -44,32 +44,7 @@ function playRound(playerSelection, computerSelection){
     } 
 }
 
-// function game(){
-//     var playerScore=0;
-//     var computerScore=0;
-//     const res = document.querySelector('div');
-//     for(var i=0; i<5; i++){
-//         console.log("A new round is starting!");
-//         var outcome = UIgame();
 
-//         console.log(outcome);
-//         if(outcome.includes("Win!", 4)){
-//             playerScore++;
-//         }
-//         else{
-//             computerScore++;
-//         }
-//     }
-//     if(playerScore > computerScore){
-//         console.log("You Won the game!");
-//     }
-//     else if(computerScore > playerScore){
-//         console.log("You Lost the game!");
-//     }
-//     else{
-//         console.log("It's a tie!");
-//     }
-// }
 
 UIgame();
 const board = document.querySelector('.result');
@@ -78,12 +53,12 @@ function displayResults(outcome){
 
     result.textContent = outcome;
     result.style.color = 'red';
+    result.id = 'threeSeconds';
     board.appendChild(result);
-    setTimeout(function () {
-
-        board.removeChild(result);
-    }, 3000);
-    
+    setTimeout(function(){
+        document.getElementById('threeSeconds').className += ' hidden';
+    }, 5000);
+    document.getElementById('threeSeconds').className -= ' hidden';
     
     
     
@@ -93,7 +68,7 @@ function UIgame(){
     var playerScore=0;
     var computerScore=0;
     const res = document.querySelector('.result');
-
+    for(var i=0; i<5; i++){
     btns.forEach(btn => {
         btn.addEventListener('click', (e)=> {
             var outcome = playRound(e.target.innerText, computerPlay());
@@ -103,6 +78,7 @@ function UIgame(){
            
         })
     });
+}
 
 
 }

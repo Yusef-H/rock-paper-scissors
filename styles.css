@@ -1,14 +1,25 @@
+html{
+    background-image: url(rps-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
+    height: 100%;
+}
 
 body{
     display: flex;
-    justify-content: center;
-    margin-top: 250px;
+    flex-direction: column;
+    margin-top: 50px;
     flex-wrap: wrap;
-    border: 2px solid red;
+
+    /* border: 2px solid red; */
 }
 
 .result{
     border: 2px solid green;
+    align-self: center;
 
 }
 .buttons{
@@ -17,14 +28,19 @@ body{
     gap:35px;
     width: 100%;
 
+    border: 2px solid black;
+
 }
 button{
-    width: 200px;
-    height: 200px;
-    font-size: 35px;
-    border-radius: 8px;
-    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    font-size: 25px;
+    border-radius: 12px;
+    background-color: rgb(29, 192, 192);
     font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
+}
+.hidden{
+    display: none;
 }
 
