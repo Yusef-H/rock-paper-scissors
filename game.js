@@ -62,7 +62,7 @@ function displayResults(outcome){
     board.appendChild(result);
     setTimeout(function(){
         document.getElementById('threeSeconds').className += ' hidden';
-    }, 3000);
+    }, 5000);
     document.getElementById('threeSeconds').className -= ' hidden';
 }
 
@@ -91,7 +91,7 @@ function UIgame(){
             
             displayResults(outcome);
             if(outcome.includes("Win!", 4)){
-                // playerScore++;
+                playerScore++;
             }
             else if(outcome.includes("Lose!", 4)){
                 computerScore++;
