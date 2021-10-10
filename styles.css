@@ -1,14 +1,36 @@
 html{ 
-    background-image: url(rps-background.jpg);
+    background-image: url(rock.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
+    display: flex;
     height: 120%; 
+
 }
 .win{
-    background-image: url(download.jpg);
-    border: 2px solid red;
+    background-image: url(win.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center;
+    flex:1;
+
+    /* border: 2px solid black; */
+    justify-self: center;
+    align-self: center;
+}
+
+.lose{
+    background-image: url(lose.png);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: center;
+    /* flex:1; */
+    border: 2px solid black;
+
+    
+    justify-self: center;
+    align-self: center;
 }
 
 .score{
@@ -29,6 +51,11 @@ body{
     flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+    
+    
 
     /* border: 2px solid red; */
 }

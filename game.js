@@ -76,6 +76,7 @@ function updateScoreBoard(playerScore, computerScore){
 
 const playerWin = document.createElement('div');
 const computerWin = document.createElement('div');
+const body = document.querySelector('body');
 
 function UIgame(){
     
@@ -90,7 +91,7 @@ function UIgame(){
             
             displayResults(outcome);
             if(outcome.includes("Win!", 4)){
-                playerScore++;
+                // playerScore++;
             }
             else if(outcome.includes("Lose!", 4)){
                 computerScore++;
@@ -98,15 +99,32 @@ function UIgame(){
             updateScoreBoard(playerScore, computerScore);
 
             if(playerScore == 5){
-                playerWin.id = 'win';
-                document.getElementById('win').className += ' win';
-                
-
-
+                var elements = document.getElementsByTagName('*');
+                for(var i = 0; i<elements.length; i++){
+                    if(elements[i].className != "hey"){
+                        elements[i].className += ' hidden';
+                    }
+                }
+                body.className += ' win';
+            }
+            else if(computerScore == 5){
+                var elements = document.getElementsByTagName('*');
+                for(var i = 0; i<elements.length; i++){
+                    if(elements[i].className != "hey"){
+                        elements[i].className += ' hidden';
+                    }
+                }
+                body.className += ' lose';
             }
         })
     });
 
-
-
 }
+
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
